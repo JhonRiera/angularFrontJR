@@ -6,10 +6,10 @@ export class personService {
 
     constructor(private http: HttpClient) { }
 
-    getPerson() {
-        return this.http.get<any>('localhost/')
-            .toPromise()
-            .then(res => res.data as any[])
-            .then(data => data);
-    }
+    postPerson(data: any) {
+        return this.http.post<any>('assets/data/person.json', data)
+          .toPromise()
+          .then(res => res.data as any[])
+          .then(data => data);
+      }
 }

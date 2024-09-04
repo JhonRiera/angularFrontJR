@@ -1,1 +1,4 @@
 <p>home works!</p>
+    <div *ngFor="let btn of botones">
+      <button (click)="onButtonClick(btn)">{{ btn.cabeceraboton }}</button>
+    </div>
